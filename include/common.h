@@ -38,7 +38,7 @@ void jflush_put_bits(PutBitContext *s);
 
 /* misc math functions */
 
-extern inline int log2(unsigned int v)
+/*extern inline int log2(unsigned int v)
 {
     int n;
 
@@ -63,6 +63,6 @@ extern inline int log2(unsigned int v)
         n++;
     }
     return n;
-}
+}*/
 
 #endif

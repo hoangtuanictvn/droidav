@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include <common.h>
+#include <avcodec.h>
+#include <mpegvideo.h>
 int main(int argv,char* argc[]){
-    printf("%d\n",log2(4));
- return 0;
+    
+    return 0;
 }

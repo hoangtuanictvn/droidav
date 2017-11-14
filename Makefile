@@ -20,10 +20,9 @@ $(LIBS): $(OBJECTS)
 	mkdir -p bin/lib
 	$(CC) -shared $^ -o bin/lib/$(LIBS) $(INC) $(LIB)
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
-	mkdir build
 	$(CC) $(CFLAGS) -c -o $@ $< $(INC)
 test:
 	$(CC) $(CFLAGS) tests/test.c $(INC) $(LIB) -o test
 clean:
-	$(RM) -r $(BUILDDIR) $(TARGET) $(BINDIR)
+	$(RM) -r $(BUILDDIR)/*.o $(TARGET) $(BINDIR) test
 .PHONY: clean
